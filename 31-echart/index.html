@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='./layout.css'/>
+    
+    <title>二进熵函数</title>
+</head>
+<body>
+    <script src="https://lib.baomitu.com/echarts/4.6.0/echarts-en.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" ></script>
+    <div id="main" class="main" style="width: 700px;  height:400px;"> </div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'JavaScript语言排名变化'
+            },
+            xAxis: {
+                type: 'category',
+                data: [2000,2005,2010,2015,2020]
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [6,9,8,8,7],
+                type: 'line'
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

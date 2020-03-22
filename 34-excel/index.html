@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.css">
+    <link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.js"></script>
+</head>
+<body>
+    <p style="margin-left: 230px;">2020语言排行榜</p>
+    <div id="hot" style="text-align: center;"></div>
+    <script>
+    var dataObject = [
+            {
+                "语言名称":"Java",
+                "排名":"1",
+                "升或降":"降",
+                "变化幅度":"-0.01%", 
+            },
+            {
+                "语言名称":"C",
+                "排名":"2",
+                "升或降":"升",
+                "变化幅度":"+2.44%", 
+            },
+            {
+                "语言名称":"Python",
+                "排名":"3",
+                "升或降":"升",
+                "变化幅度":"+1.41%", 
+            },
+            {
+                "语言名称":"C++",
+                "排名":"4",
+                "升或降":"降",
+                "变化幅度":"-2.58%", 
+            },
+            {
+                "语言名称":"C#",
+                "排名":"5",
+                "升或降":"升",
+                "变化幅度":"+2.07%", 
+            },
+            {
+                "语言名称":"Visual Basic .NET",
+                "排名":"6",
+                "升或降":"降",
+                "变化幅度":"-1.17%", 
+            },
+            {
+                "语言名称":"JavaScript",
+                "排名":"7",
+                "升或降":"降",
+                "变化幅度":"-0.85%", 
+            },
+            
+        ];
+        var hotElement = document.querySelector('#hot');
+        var hotElementContainer = hotElement.parentNode;
+        var hotSettings = {
+            data: dataObject,
+            columns: [
+                {
+                    data: '语言名称',
+                    type: 'text',
+                    width: 40
+                },
+                {
+                    data: '排名',
+                    type: 'numeric',
+                },
+                {
+                    data: '升或降',
+                    type: 'text'
+                },
+                {
+                    data: '变化幅度',
+                    type: 'numeric',
+                    numericFormat: {
+                        pattern: '0.00%'
+                    }
+                }
+            ],
+            stretchH: 'all',
+            width: 660,
+            autoWrapRow: true,
+            height: 480,
+            colHeaders: [
+                "语言名称",
+                "排名",
+                "升或降",
+                "变化幅度", 
+            ],
+        };
+        var hot = new Handsontable(hotElement, hotSettings);
+    </script>
+</body>
+</html>
