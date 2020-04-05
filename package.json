@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangding/spa.git"
+    "url": "git+https://github.com/DQH123456/spa.git"
   },
-  "author": "wangding",
+  "author": "DQH123456",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangding/spa/issues"
+    "url": "https://github.com/DQH123456/spa/issues"
   },
-  "homepage": "https://github.com/wangding/spa#readme",
+  "homepage": "https://github.com/DQH123456/spa#readme",
   "devDependencies": {
     "grunt": "^1.0.3",
     "grunt-contrib-copy": "^1.0.0",
