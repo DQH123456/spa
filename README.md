@@ -1,3 +1,3 @@
 # SPA
 
-SPA web 富应用开发
+SPA 富应用开发
